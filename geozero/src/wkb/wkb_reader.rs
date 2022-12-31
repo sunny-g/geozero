@@ -21,7 +21,7 @@ impl GeozeroGeometry for Wkb {
 /// EWKB reader.
 #[cfg_attr(
     feature = "with-postgis-diesel",
-    derive(Debug, AsExpression, FromSqlRow, PartialEq)
+    derive(Debug, Clone, AsExpression, FromSqlRow, PartialEq)
 )]
 #[cfg_attr(feature = "with-postgis-diesel", diesel(sql_type = Geometry))]
 #[cfg_attr(feature = "with-postgis-diesel", diesel(sql_type = Geography))]
