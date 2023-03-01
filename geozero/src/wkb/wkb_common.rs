@@ -37,7 +37,7 @@ pub trait FromWkb {
 }
 
 /// WKB dialect.
-#[derive(PartialEq, Debug)]
+#[derive(Copy, Clone, PartialEq, Debug)]
 pub enum WkbDialect {
     Wkb,
     Ewkb,
@@ -45,7 +45,7 @@ pub enum WkbDialect {
 }
 
 /// WKB Types according to OGC 06-103r4 (<https://www.ogc.org/standards/sfa>)
-#[derive(PartialEq, Clone, Debug)]
+#[derive(Copy, Clone, PartialEq, Debug)]
 pub enum WKBGeometryType {
     Unknown = 0,
     Point = 1,
